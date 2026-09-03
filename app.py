@@ -25,6 +25,11 @@ def verificar():
         session['usuario_cpf'] = cpf
         return redirect('/painel')
 
+    if cpf == "01987654321" and senha == "321":
+        session['usuario_nome'] = "Lucas"
+        session['usuario_cpf'] = cpf
+        return redirect('/painel')
+
     return redirect('/')
 
 @app.route('/sair')
